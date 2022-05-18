@@ -7,7 +7,7 @@ Bonus Part : ?/?
 
 ## Description
 
-?
+This project consists of recoding printf with the possibility of reusing it in future projects. This project is mainly about variable size arguments.
 
 ## What's in this project
 
