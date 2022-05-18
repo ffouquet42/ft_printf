@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 05:49:33 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 07:33:56 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/18 10:55:56 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@ void	ft_what_percentage(char c, va_list ap)
 		ft_putchar((char)va_arg(ap, int));
 	else if (c == 's')
 		ft_putstr(va_arg(ap, char *));
-	//else if (c == 'p')
-	//	ft_percentage_p(ap);
+	else if (c == 'p')
+	{
+		write(1, "0x", 2);
+		ft_ptr(va_arg(ap, unsigned long long int));
+	}
 	else if (c == 'd' || c == 'i')
 		ft_putnbr(va_arg(ap, int));
 	else if (c == 'u')

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_add_sum.c                                       :+:      :+:    :+:   */
+/*   ft_ptr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 07:08:02 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 11:03:56 by fllanet          ###   ########.fr       */
+/*   Created: 2022/05/18 10:43:02 by fllanet           #+#    #+#             */
+/*   Updated: 2022/05/18 10:53:45 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_add_sum(char c, va_list ap)
+void	ft_ptr(unsigned long long int n)
 {
-	if (c == 'c' || c == '%')
-		return (1);
-	else if (c == 's')
-		return (ft_strlen(va_arg(ap, char *)));
-	else if (c == 'p')
-			return (ft_size_ptr(va_arg(ap, unsigned long long int)) + 2);
-	else if (c == 'd' || c == 'i' || c == 'u')
-		return (ft_nbrlen(va_arg(ap, int)));
-	else if (c == 'x' || c == 'X')
-		return (ft_size_hexa(va_arg(ap, unsigned int)));
+	long	nb;
+	char	*base;
+
+	base = "0123456789abcdef";
+	nb = n;
+	if (nb >= 16)
+	{
+		ft_ptr(nb / 16);
+		n = n % 16;
+	}
+	write(1, &base[n], 1);
 }
