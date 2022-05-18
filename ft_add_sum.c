@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 07:08:02 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 11:03:56 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/18 11:06:11 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_add_sum(char c, va_list ap)
 	else if (c == 's')
 		return (ft_strlen(va_arg(ap, char *)));
 	else if (c == 'p')
-			return (ft_size_ptr(va_arg(ap, unsigned long long int)) + 2);
+		return (ft_size_ptr(va_arg(ap, unsigned long long int)) + 2);
 	else if (c == 'd' || c == 'i' || c == 'u')
 		return (ft_nbrlen(va_arg(ap, int)));
 	else if (c == 'x' || c == 'X')

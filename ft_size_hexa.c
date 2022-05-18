@@ -6,13 +6,13 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 08:37:35 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 08:48:18 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/18 11:06:26 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_size_hexa(unsigned int n)
+int	ft_size_hexa(unsigned int n)
 {
 	int	size;
 

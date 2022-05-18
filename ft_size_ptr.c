@@ -6,11 +6,11 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:01:30 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 11:03:05 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/18 11:06:37 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_size_ptr(unsigned long long int n)
+int	ft_size_ptr(unsigned long long int n)
 {
 	int	size;
 
