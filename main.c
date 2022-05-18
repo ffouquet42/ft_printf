@@ -6,12 +6,12 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 05:32:39 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 06:55:22 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/18 07:05:13 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // delete
-
+/*
 #include "ft_printf.h"
 #include <stdio.h>
 
@@ -47,7 +47,7 @@ int	main(void)
 	
 	ft_printf("\n-------------------------------\n");
 
-	// Test %u
+	// Test %u - unsigned double ?
 	ft_printf("\n=== Test %%u ===\n\n");
 
 	ft_printf("Hello %u world %u\n", 123, 789);
@@ -82,3 +82,4 @@ int	main(void)
 	
 	return (0);
 }
+*/
