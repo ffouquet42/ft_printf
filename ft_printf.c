@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 00:26:31 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/17 08:41:52 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/18 06:43:02 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_printf(const char *str, ...)
 {
-	int	i;
-	int	sum;
-	
+	int		i;
+	int		sum;
+	va_list	ap;
+
 	i = 0;
 	sum = 0;
-	va_list ap;
 	va_start(ap, str);
 	while (str[i])
 	{

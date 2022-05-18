@@ -6,13 +6,13 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 09:02:00 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/17 11:48:00 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/18 06:46:22 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_dec_to_hex(int n, int base)
+void	ft_dec_to_hex(unsigned int n, int base)
 {
 	long	nb;
 	char	*lower_base;

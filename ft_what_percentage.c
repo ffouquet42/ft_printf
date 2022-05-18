@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 05:49:33 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/17 11:50:38 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/18 06:46:36 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void	ft_what_percentage(char c, va_list ap)
 	else if (c == 'u')
 		ft_putnbr_unsigned(va_arg(ap, int));
 	else if (c == 'x')
-		ft_dec_to_hex(va_arg(ap, int), 0);
+		ft_dec_to_hex(va_arg(ap, unsigned int), 0);
 	else if (c == 'X')
-		ft_dec_to_hex(va_arg(ap, int), 1);
+		ft_dec_to_hex(va_arg(ap, unsigned int), 1);
 	else if (c == '%')
 		ft_putchar('%');
 }
