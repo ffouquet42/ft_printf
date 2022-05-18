@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 06:20:36 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 07:33:39 by fllanet          ###   ########.fr       */
+/*   Created: 2022/05/18 08:07:13 by fllanet           #+#    #+#             */
+/*   Updated: 2022/05/18 08:49:05 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_strlen(char *str)
+int	ft_nbrlen(int n)
 {
-	int	i;
-
+	long	nb;
+	int		i;
+	
+	nb = n;
 	i = 0;
-	while (str[i])
+	if (nb < 0)
+	{
+		nb *= -1;
 		i++;
+	}
+	if (nb == 0)
+		return (1);
+	while (nb > 0)
+	{
+		nb /= 10;
+		i++;
+	}
 	return (i);
 }

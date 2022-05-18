@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 00:26:56 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 06:46:52 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/18 08:47:03 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,8 @@ void	ft_putnbr(int n);
 void	ft_putnbr_unsigned(unsigned int n);
 void	ft_what_percentage(char c, va_list ap);
 void	ft_dec_to_hex(unsigned int n, int base);
+int		ft_add_sum(char c, va_list ap);
+int		ft_nbrlen(int nb);
+int		ft_size_hexa(unsigned int n);
 
 #endif

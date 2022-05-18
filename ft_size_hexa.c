@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_size_hexa.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 06:20:36 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 07:33:39 by fllanet          ###   ########.fr       */
+/*   Created: 2022/05/18 08:37:35 by fllanet           #+#    #+#             */
+/*   Updated: 2022/05/18 08:48:18 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_strlen(char *str)
+int ft_size_hexa(unsigned int n)
 {
-	int	i;
+	int	size;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	size = (n == 0);
+	while (n)
+	{
+		n /= 16;
+		size++;
+	}
+	return (size);
 }
