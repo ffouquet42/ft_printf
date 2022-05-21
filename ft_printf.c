@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 00:26:31 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 11:16:50 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/21 03:38:30 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *str, ...)
 	va_copy(cpy, ap);
 	while (str[i])
 	{
-		if (str[i] == '%' && ft_valid_char(str[i + 1]))
+		if (str[i] == '%' && str[i + 1] && ft_valid_char(str[i + 1]))
 		{
 			ft_what_percentage(str[++i], ap);
 			sum += ft_add_sum(str[i++], cpy);

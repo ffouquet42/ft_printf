@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 06:18:06 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/17 10:53:10 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/21 00:23:49 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	ft_putstr(char *str)
 {
+	if (str == NULL)
+	{
+		write(1, "(null)", 6);
+		return ;
+	}
 	while (*str)
 		write(1, str++, 1);
 }
