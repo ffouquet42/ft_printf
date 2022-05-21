@@ -6,12 +6,13 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 05:32:39 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/18 11:20:32 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/21 03:50:41 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 int	main(void)
 {
@@ -23,7 +24,7 @@ int	main(void)
 	ft_printf("\n-------------------------------\n");
 
 	// Test %c
-	ft_printf("\n=== Test %%c ===\n\n");
+	ft_printf("\n=== Test %c ===\n\n");
 
 	ft_printf("Hello %c\n", 'a');
 	ft_printf("Hello %c%c%c\n", 'a', 'b', 'c');
@@ -168,6 +169,49 @@ int	main(void)
 	printf("--------------   percent : %%   --------------\n");
 	ret_my_function = ft_printf("ft_printf    : %%\n");
 	ret_reel_function = printf("real printf  : %%\n");
+	if (ret_reel_function == ret_my_function)
+		printf("return is ok : [%d,%d]\n\n",ret_my_function, ret_reel_function);
+	else
+		printf("return is not ok : [%d,%d]\n\n", ret_my_function, ret_reel_function);
+
+	ft_printf("=========================================\n");
+	
+	printf("--------------   %%s : NULL   --------------\n");
+	ret_my_function = ft_printf("NULL %s NULL\n", NULL);
+	ret_reel_function = printf("NULL %s NULL\n", NULL);
+	if (ret_reel_function == ret_my_function)
+		printf("return is ok : [%d,%d]\n\n",ret_my_function, ret_reel_function);
+	else
+		printf("return is not ok : [%d,%d]\n\n", ret_my_function, ret_reel_function);
+
+	printf("--------------   %%u : neg   --------------\n");
+	ret_my_function = ft_printf(" %u \n", -10);
+	ret_reel_function = printf(" %u \n", -10);
+	if (ret_reel_function == ret_my_function)
+		printf("return is ok : [%d,%d]\n\n",ret_my_function, ret_reel_function);
+	else
+		printf("return is not ok : [%d,%d]\n\n", ret_my_function, ret_reel_function);
+
+	printf("--------------   %%p - LONG MIN MAX  --------------\n");
+	ret_my_function = ft_printf("ft_printf    : [%p / %p]\n", LONG_MIN, LONG_MAX);
+	ret_reel_function = printf("real printf  : [%p / %p]\n", LONG_MIN, LONG_MAX);
+	if (ret_reel_function == ret_my_function)
+		printf("return is ok : [%d,%d]\n\n",ret_my_function, ret_reel_function);
+	else
+		printf("return is not ok : [%d,%d]\n\n", ret_my_function, ret_reel_function);
+
+	printf("--------------   %%p - 0  --------------\n");
+	ret_my_function = ft_printf("ft_printf    : [%p / %p]\n", 0, 0);
+	ret_reel_function = printf("real printf  : [%p / %p]\n", 0, 0);
+	if (ret_reel_function == ret_my_function)
+		printf("return is ok : [%d,%d]\n\n",ret_my_function, ret_reel_function);
+	else
+		printf("return is not ok : [%d,%d]\n\n", ret_my_function, ret_reel_function);
+
+	//--------------------------------------------------mix
+	printf("--------------   mix : %%   --------------\n");
+	ret_my_function = ft_printf("ft_printf    : %c%%%s", 'c', "julien");
+	ret_reel_function = printf("real printf  :  %c%%%s", 'c', "julien");
 	if (ret_reel_function == ret_my_function)
 		printf("return is ok : [%d,%d]\n\n",ret_my_function, ret_reel_function);
 	else
