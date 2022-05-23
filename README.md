@@ -21,6 +21,8 @@ This project consists of recoding printf with the possibility of reusing it in f
 
 ?
 
+Compil with gcc without flags for testings (give command) and don't worry about warning, it testings things who's not existing like %y
+
 ## Credit
 
 Project made by ffouquet42.
