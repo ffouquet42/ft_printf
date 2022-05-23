@@ -1,42 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_add_sum_c.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 00:26:31 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/23 06:27:13 by fllanet          ###   ########.fr       */
+/*   Created: 2022/05/23 06:42:14 by fllanet           #+#    #+#             */
+/*   Updated: 2022/05/23 06:54:38 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *str, ...)
+int	ft_add_sum_c(char c)
 {
-	int		i;
-	int		sum;
-	va_list	ap;
-	va_list	cpy;
-
-	i = 0;
-	sum = 0;
-	va_start(ap, str);
-	va_copy(cpy, ap);
-	while (str[i])
-	{
-		if (str[i] == '%' && ft_valid_char(str[i + 1]))
-		{
-			ft_what_percentage(str[++i], ap);
-			sum += ft_add_sum(str[i++], cpy);
-		}
-		else
-		{
-			ft_putchar(str[i++]);
-			sum++;
-		}
-	}
-	va_end(ap);
-	va_end(cpy);
-	return (sum);
+	(void)c;
+	return (1);
 }

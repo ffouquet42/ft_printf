@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 07:08:02 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/21 03:58:25 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/23 06:41:54 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ int	ft_add_sum(char c, va_list ap)
 	ptr = 0;
 	if (c == 'c')
 	{
-		char a = (char)va_arg(ap, int);
-		return (1);
+		return (ft_add_sum_c(va_arg(ap, int)));
 	}
 	else if (c == '%')
 		return (1);

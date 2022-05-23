@@ -6,7 +6,7 @@
 /*   By: fllanet <fllanet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 00:26:56 by fllanet           #+#    #+#             */
-/*   Updated: 2022/05/21 03:15:50 by fllanet          ###   ########.fr       */
+/*   Updated: 2022/05/23 06:43:47 by fllanet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int				ft_size_hexa(unsigned int n);
 void			ft_ptr(unsigned long long int n);
 int				ft_size_ptr(unsigned long long int n);
 unsigned int	ft_nbrlen_unsigned(unsigned int n);
+int				ft_add_sum_c(char c);
 
 #endif
